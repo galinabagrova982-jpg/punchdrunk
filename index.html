@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СИГНАЛ_ПОТЕРЯН // 0xDEADBEEF</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚠️</text></svg>">
+</head>
+<body>
+
+<!-- Шум / глитч-оверлей -->
+<div class="noise"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div id="glitch-overlay"></div>
+
+<!-- Терминал -->
+<main class="terminal" id="terminal">
+  <div class="terminal-header">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+    <span class="title">SESSION_0x00A1 // НЕИЗВЕСТНЫЙ_УЗЕЛ</span>
+  </div>
+
+  <div class="terminal-body" id="output">
+    <p class="line system">> Инициализация протокола... OK</p>
+    <p class="line system">> Проверка целостности памяти... <span class="err">ПОВРЕЖДЕНА</span></p>
+    <p class="line system">> Соединение с узлом 7... <span class="ok">УСТАНОВЛЕНО</span></p>
+    <p class="line whisper">ты слышишь это?</p>
+    <p class="line">Добро пожаловать, <span id="visitor-name">ПОЛЬЗОВАТЕЛЬ</span>.</p>
+    <p class="line">Мы ждали тебя. Ты — <span class="glitch-text" data-text="СЕДЬМОЙ">СЕДЬМОЙ</span>.</p>
+    <p class="line dim">Введи команду ниже. Попробуй: <code>help</code></p>
+  </div>
+
+  <div class="terminal-input">
+    <span class="prompt">&gt;</span>
+    <input type="text" id="cmd" autocomplete="off" autofocus spellcheck="false">
+  </div>
+</main>
+
+<!-- Скрытый "артефакт" — найдёт только внимательный -->
+<footer class="hidden-footer">
+  <!-- Ключ: 0x7F3A-ДЕЛЬТА. Не рассказывай никому. -->
+  <a href="https://example.com" class="hidden-link" title="ты не должен был это найти">◆</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
